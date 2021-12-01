@@ -14,3 +14,20 @@ input.forEach((number) => {
 });
 
 console.log(increment);
+
+// part 2
+lastValue = -1;
+increment = 0;
+
+for (let i = 2; i < input.length; i++) {
+  const number = (+input[i-2]) + (+input[i-1]) + (+input[i]);
+  if (number > lastValue) {
+    if (i >= 3){
+      increment++;
+    }
+  }
+  lastValue = number;
+}
+
+
+console.log(increment);
